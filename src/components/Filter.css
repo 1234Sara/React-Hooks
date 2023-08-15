@@ -1,0 +1,22 @@
+.filter {
+  display: grid;
+  grid-template-columns: "1fr 1fr";
+  gap: 10px;
+}
+
+/* .rating {
+  width: 600px;
+  height: 40px;
+}
+.rating {
+  border: 1px solid;
+  background: #ce8888;
+  display: table-cell;
+  padding: 2px;
+} */
+/* .rating {
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  width: 150vh;
+} */
