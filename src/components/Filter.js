@@ -9,7 +9,7 @@ const Filters = ({ filterMovies }) => {
 
   return (
     <div className="filter">
-      <Form className="form">
+      <Form style={{ display: "flex", gap: "2rem" }}>
         <Form.Label>Title</Form.Label>
         <Form.Control
           className="title"
@@ -20,6 +20,7 @@ const Filters = ({ filterMovies }) => {
             setTitleFilter(e.target.value);
           }}
         />
+
         <Form.Label>Rating</Form.Label>
         <Form.Control
           className="rating"
@@ -39,6 +40,7 @@ const Filters = ({ filterMovies }) => {
           }}
         />
       </Form>
+
       <Button
         variant="primary"
         onClick={() => {

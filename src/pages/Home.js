@@ -4,7 +4,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import NewMovie from "../components/NewMovie";
 
-const movies = [
+export const movies = [
   {
     title: "Collateral Beauty",
     description:
@@ -12,6 +12,8 @@ const movies = [
     posterURL:
       "https://m.media-amazon.com/images/M/MV5BMTQ5ODE4MTY2NV5BMl5BanBnXkFtZTgwMzM2NzEzMDI@._V1_FMjpg_UX1000_.jpg",
     rating: 9.5,
+    id: 1,
+    trailer: "https://www.youtube.com/watch?v=-JDf2zIFgO8",
   },
   {
     title: "Titanic",
@@ -20,6 +22,8 @@ const movies = [
     posterURL:
       "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_FMjpg_UX1000_.jpg",
     rating: 9,
+    id: 2,
+    trailer: "https://www.youtube.com/watch?v=lP6-9XeEbPc",
   },
   {
     title: "La La Land",
@@ -28,6 +32,8 @@ const movies = [
     posterURL:
       "https://www.goldenglobes.com/sites/default/files/articles/cover_images/2017-la_la_land.jpg?format=pjpg&auto=webp&optimize=high&width=850",
     rating: 8,
+    id: 3,
+    trailer: "https://www.youtube.com/watch?v=0pdqf4P9MB8",
   },
   {
     title: "The Conjuring",
@@ -36,6 +42,8 @@ const movies = [
     posterURL:
       "https://m.media-amazon.com/images/M/MV5BZjU5OWVlN2EtODNlYy00MjhhLWI0MDUtMTA3MmQ5MGMwYTZmXkEyXkFqcGdeQXVyNjE5MTM4MzY@._V1_FMjpg_UX1000_.jpg",
     rating: 8.5,
+    id: 4,
+    trailer: "https://www.youtube.com/watch?v=ejMMn0t58Lc",
   },
   {
     title: "Beauty and the Beast",
@@ -44,6 +52,8 @@ const movies = [
     posterURL:
       "https://lumiere-a.akamaihd.net/v1/images/p_beautyandthebeast_19752_32e65c36.jpeg",
     rating: 9.6,
+    id: 5,
+    trailer: "https://www.youtube.com/watch?v=e3Nl_TCQXuw",
   },
 ];
 
@@ -80,7 +90,7 @@ const Home = () => {
     >
       <Filters filterMovies={handleFilterMovies} />
       <Button
-        style={{ width: "20%", marginTop: "1%" }}
+        style={{ width: "35%", marginTop: "1%" }}
         onClick={() => setShowModal(true)}
       >
         Add New Movie

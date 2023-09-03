@@ -8,12 +8,16 @@ const NewMovie = ({ showModal, handleClose, handleSave }) => {
   const [descriptionMovie, setDescriptionMovie] = useState("");
   const [posterURLMovie, setPosterURLMovie] = useState("");
   const [ratingMovie, setRatingMoive] = useState("");
+  const [idMovie, setIdMoive] = useState("");
+  const [trailerMovie, setTrailerIdMoive] = useState("");
 
   const resetStates = () => {
     setTitleMovie("");
     setDescriptionMovie("");
     setPosterURLMovie("");
     setRatingMoive("");
+    setIdMoive("");
+    setTrailerIdMoive("");
   };
 
   const handleCloseModal = () => {
@@ -27,6 +31,8 @@ const NewMovie = ({ showModal, handleClose, handleSave }) => {
       description: descriptionMovie,
       posterURL: posterURLMovie,
       rating: ratingMovie,
+      id: idMovie,
+      trailer: trailerMovie,
     });
     resetStates();
   };
@@ -72,6 +78,24 @@ const NewMovie = ({ showModal, handleClose, handleSave }) => {
             value={ratingMovie}
             onChange={(e) => {
               setRatingMoive(e.target.value);
+            }}
+          />
+          <Form.Label>ID Movie</Form.Label>
+          <Form.Control
+            type="ID"
+            placeholder="For Example: ID as a number for URL / number"
+            value={idMovie}
+            onChange={(e) => {
+              setIdMoive(e.target.value);
+            }}
+          />
+          <Form.Label>Trailer Movie</Form.Label>
+          <Form.Control
+            type="Trailer"
+            placeholder="For Example: Trailer Movie from YouTube"
+            value={trailerMovie}
+            onChange={(e) => {
+              setTrailerIdMoive(e.target.value);
             }}
           />
         </Form>
